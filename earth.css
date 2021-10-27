@@ -1,0 +1,332 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'sans-serif;
+
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+.planet
+{
+    display: flex;
+    flex-direction: column;
+
+}
+.planet h2
+{
+    color: #fff;
+    font-size: 4em;
+    margin-bottom: 40px;
+    font-weight: 600;
+
+}
+.planet h1
+{
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 40px;
+    font-weight: 300;
+    bottom: 50px;
+}
+.planet .container
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.planetEarth
+{
+    position: relative;
+    min-width: 30%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #182357;
+
+}
+.planetEarth .loader
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.planetEarth .loader:before
+{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(255,0,98,0.4));
+    background-size: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+ 
+
+}
+.planetEarth .loader::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #36faaf;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #36faaf, 0 0 20px #00fff9, 0 0 30px #00fff9, 0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9, 0 0 80px #00fff9, 0 0 90px #00fff9,  0 0 100px #ff0000;
+}
+.planetEarth .loader span
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #182357;
+    border-radius: 60%;
+}
+.earth
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url(earth.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #36faaf, 0 0 20px #36faaf ;
+    animation: animateEarth 10s linear infinite;
+}
+@keyframes animateEarth 
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 162.5%;  
+    }
+}
+
+
+
+.planetMars
+{
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #182357;
+
+}
+.planetMars .loader
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.planetMars .loader:before
+{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(255,0,98,0.4));
+    background-size: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+ 
+
+}
+.planetMars .loader::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-90%);
+    width: 15px;
+    height: 15px;
+    background: #d4912b;
+    border-radius: 50%;
+    z-index: 50;
+    box-shadow: 0 0 10px #d4912b, 0 0 20px #00fff9, 0 0 30px #00fff9, 0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9, 0 0 80px #00fff9, 0 0 90px #00fff9,  0 0 100px #ff0000;
+}
+.planetMars .loader span
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #182357;
+    border-radius: 50%;
+}
+.mars
+{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: url(mars.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #d4912b, 0 0 20px #d4912b ;
+    animation: animateEarth 30s linear infinite;
+}
+@keyframes animateEarth 
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 162.5%;  
+    }
+}
+
+
+
+
+
+
+
+.planetUran
+{
+    position: relative;
+    min-width: 30%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #182357;
+
+}
+.planetUran .loader
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.planetUran .loader:before
+{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(255,0,98,0.4));
+    background-size: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+ 
+
+}
+.planetUran .loader::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #17a0b3;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #17a0b3, 0 0 20px #00fff9, 0 0 30px #00fff9, 0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9, 0 0 80px #00fff9, 0 0 90px #00fff9,  0 0 100px #ff0000;
+}
+.planetUran .loader span
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #182357;
+    border-radius: 50%;
+}
+.Uran
+{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url(uran.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #17a0b3, 0 0 20px #17a0b3 ;
+    animation: animateEarth 50s linear infinite;
+}
+@keyframes animateEarth 
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 162.5%;  
+    }
+}
+
+
